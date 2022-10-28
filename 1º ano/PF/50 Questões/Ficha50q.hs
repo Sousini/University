@@ -263,8 +263,13 @@ mydelete n (h:t) = if n == h then t
 (\\\) :: Eq a => [a] -> [a] -> [a] 
 (\\\) l [] = l 
 (\\\) [] l = [] 
-(\\\) (x:xs) (h:t) = if x == h then (\\\) xs t 
-                  else x : (\\\) xs (h:t) 
+(\\\) (x:xs) (h:t) = (\\\) (delete2 h (x:xs)) t 
+
+
+delete2 :: Eq a => a -> [a] -> [a] 
+delete2 _ [] = [] 
+delete2 n (h:t) = if n == h then t 
+                else h : delete2 n t
 
 
 
@@ -274,8 +279,14 @@ mydelete n (h:t) = if n == h then t
 myunion :: Eq a => [a] -> [a] -> [a] 
 myunion [] l = l
 myunion l [] = l 
-myunion (h:t) (x:xs) = if h == x then myunion (h:t) xs 
-                     else h : myunion t (x:xs) 
+myunion (h:t) (x:xs) = if ocorre x (h:t) then myunion (h:t) xs
+                     else myunion (h:t) xs ++ [x]
+ 
+
+ocorre :: Eq a => a -> [a] -> Bool 
+ocorre _ [] = False
+ocorre n (h:t) = if n == h then True 
+               else ocorre n t 
 
 
 -- exercicio 30
