@@ -291,3 +291,4 @@ ocorre n (h:t) = if n == h then True
 
 -- exercicio 30
 
+
