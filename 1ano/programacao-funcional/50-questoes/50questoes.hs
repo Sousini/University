@@ -9,6 +9,7 @@
 {-# HLINT ignore "Use foldr" #-}
 {-# HLINT ignore "Redundant if" #-}
 {-# OPTIONS_GHC -Wno-overlapping-patterns #-}
+{-# HLINT ignore "Redundant bracket" #-}
 
 myenumFromTo :: Int -> Int -> [Int] 
 myenumFromTo x y | x >= y = x : []
@@ -94,10 +95,13 @@ myintersperse x (h:t) = h : x : myintersperse x t
 
 mygroup :: Eq a => [a] -> [[a]] 
 mygroup [] = [] 
-mygroup [h] = [[h]] 
+mygroup [x] = [[x]] 
 mygroup (h:t) = let ((x:xs):y) = mygroup t 
                 in if h == x then (h:x:xs) : y 
                 else [h] : (x:xs) : y  
+            
+
+
 
 
 
@@ -315,3 +319,16 @@ myunwords :: [String] -> String
 myunwords [] = [] 
 myunwords [x] = x 
 myunwords (h:t) = h ++ " " ++ myunwords t 
+
+
+-- exercicio 33 
+
+myunlines :: [String] -> String 
+myunlines [] = [] 
+myunlines [x] = x ++ "\n"
+myunlines (h:t) = h ++ "\n" ++ myunlines t 
+
+
+
+-- exercicio 34 
+
