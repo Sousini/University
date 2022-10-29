@@ -306,3 +306,12 @@ myinsert :: Ord a => a -> [a] -> [a]
 myinsert n [] = [n] 
 myinsert n (h:t) = if n <= h then n : (h:t) 
                  else h : myinsert n t
+
+
+
+-- exercicio 32
+
+myunwords :: [String] -> String 
+myunwords [] = [] 
+myunwords [x] = x 
+myunwords (h:t) = h ++ " " ++ myunwords t 
