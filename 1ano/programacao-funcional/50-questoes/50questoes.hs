@@ -289,6 +289,17 @@ ocorre n (h:t) = if n == h then True
                else ocorre n t 
 
 
--- exercicio 3
+
+-- exercicio 30 
+
+myintersect :: Eq a => [a] -> [a] -> [a] 
+myintersect [] l = [] 
+myintersect l [] = [] 
+myintersect (h:t) (x:xs) = if ocorre h (x:xs) then h : myintersect t (x:xs) 
+                          else myintersect t (x:xs)  
+
+ 
    
+-- exercicio 31 
+
 
