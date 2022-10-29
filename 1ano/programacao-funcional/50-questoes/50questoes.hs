@@ -302,4 +302,7 @@ myintersect (h:t) (x:xs) = if ocorre h (x:xs) then h : myintersect t (x:xs)
    
 -- exercicio 31 
 
-
+myinsert :: Ord a => a -> [a] -> [a]
+myinsert n [] = [n] 
+myinsert n (h:t) = if n <= h then n : (h:t) 
+                 else h : myinsert n t
