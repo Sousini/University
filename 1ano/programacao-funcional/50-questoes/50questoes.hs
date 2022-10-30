@@ -217,7 +217,7 @@ myisSuffixOf (x:xs) (h:t) = if x == h then myisSuffixOf xs t
                           else myisSuffixOf (x:xs) t 
                      
 
--- exercicio 24  ?
+-- exercicio 24  
 
 myisSubsequenceOf :: Eq a => [a] -> [a] -> Bool 
 myisSubsequenceOf [] l         = True
@@ -330,10 +330,14 @@ myunlines (h:t) = h ++ "\n" ++ myunlines t
 
 
 
--- exercicio 34 
+-- exercicio 34 ?
+
+mypMaior :: Ord a => [a] -> Int 
+mypMaior (h:t) = aux2 h t 0 1 
 
 
-
-
-
+aux2 :: Ord a => a -> [a] -> Int -> Int -> Int
+aux2 n [] x m = x 
+aux2 n (h:t) x m = if h > n then aux2 h t m (m+1) 
+                 else aux2 n t x (m+1)  
  
