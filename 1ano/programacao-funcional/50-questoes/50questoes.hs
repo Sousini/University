@@ -332,3 +332,8 @@ myunlines (h:t) = h ++ "\n" ++ myunlines t
 
 -- exercicio 34 
 
+
+
+
+
+ 
