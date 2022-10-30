@@ -341,3 +341,11 @@ aux2 n [] x m = x
 aux2 n (h:t) x m = if h > n then aux2 h t m (m+1) 
                  else aux2 n t x (m+1)  
  
+
+
+-- exercicio 35 ?
+
+mylookup :: Eq a => a -> [(a,b)] -> Maybe b 
+mylookup n [] = Nothing 
+mylookup n ((x,y):t) = if x == n then Just y   
+                    else mylookup n t   
