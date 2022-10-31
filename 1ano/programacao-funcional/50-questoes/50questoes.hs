@@ -399,3 +399,12 @@ myconverteMSet :: [(a, Int)] -> [a]
 myconverteMSet [] = [] 
 myconverteMSet ((x,y):t) = if y > 0 then x : myconverteMSet ((x,(y-1)):t) 
                          else  myconverteMSet t 
+
+
+
+-- exercicio 41 
+
+myinsereMSet :: Eq a => a -> [(a,Int)] -> [(a,Int)] 
+myinsereMSet n [] = [(n,1)] 
+myinsereMSet n ((x,y):t) = if n == x then ((x,(y+1)):t) 
+                         else (x,y) : myinsereMSet n t 
