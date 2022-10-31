@@ -408,3 +408,13 @@ myinsereMSet :: Eq a => a -> [(a,Int)] -> [(a,Int)]
 myinsereMSet n [] = [(n,1)] 
 myinsereMSet n ((x,y):t) = if n == x then ((x,(y+1)):t) 
                          else (x,y) : myinsereMSet n t 
+
+
+
+-- exercicio 42 
+
+myremoveMSet :: Eq a => a -> [(a,Int)] -> [(a,Int)] 
+myremoveMSet n [] = [] 
+myremoveMSet n ((x,y):t) | x == n && (y-1) > 0  = ((x,(y-1)):t)
+                         | x == n && (y-1) == 0 = t 
+                         | otherwise = (x,y) : myremoveMSet n t 
