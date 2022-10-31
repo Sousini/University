@@ -375,3 +375,10 @@ insert2 n (h:t) = if n <= h then n:h:t
 
 -- exercicio 38 
 
+mymenor :: String -> String -> Bool 
+mymenor [] []        = True 
+mymenor [] l         = True 
+mymenor l []         = False 
+mymenor (x:xs) (h:t) | x > h     = False 
+                     | x < h     = True 
+                     | otherwise = mymenor xs t 
