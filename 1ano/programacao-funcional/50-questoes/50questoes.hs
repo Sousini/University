@@ -382,3 +382,12 @@ mymenor l []         = False
 mymenor (x:xs) (h:t) | x > h     = False 
                      | x < h     = True 
                      | otherwise = mymenor xs t 
+
+
+
+-- exercicio 39 
+
+myelemMSet :: Eq a => a -> [(a,Int)] -> Bool 
+myelemMSet n [] = False 
+myelemMSet n ((x,y) : t) = if n == x then True 
+                         else myelemMSet n t 
