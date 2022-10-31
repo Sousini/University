@@ -390,4 +390,12 @@ mymenor (x:xs) (h:t) | x > h     = False
 myelemMSet :: Eq a => a -> [(a,Int)] -> Bool 
 myelemMSet n [] = False 
 myelemMSet n ((x,y) : t) = if n == x then True 
-                         else myelemMSet n t 
+                         else myelemMSet n t  
+
+
+-- exercicio 40 
+
+myconverteMSet :: [(a, Int)] -> [a] 
+myconverteMSet [] = [] 
+myconverteMSet ((x,y):t) = if y > 0 then x : myconverteMSet ((x,(y-1)):t) 
+                         else  myconverteMSet t 
