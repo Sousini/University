@@ -349,3 +349,12 @@ mylookup :: Eq a => a -> [(a,b)] -> Maybe b
 mylookup n [] = Nothing 
 mylookup n ((x,y):t) = if x == n then Just y   
                     else mylookup n t   
+
+
+
+-- exercicio 36 
+
+mypreCrescente :: Ord a => [a] -> [a] 
+mypreCrescente [] = [] 
+mypreCrescente (x:y:t) = if x <= y then x : mypreCrescente (y:t) 
+                        else [x]  
