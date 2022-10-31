@@ -357,4 +357,21 @@ mylookup n ((x,y):t) = if x == n then Just y
 mypreCrescente :: Ord a => [a] -> [a] 
 mypreCrescente [] = [] 
 mypreCrescente (x:y:t) = if x <= y then x : mypreCrescente (y:t) 
-                        else [x]  
+                        else [x] 
+
+
+-- exercicio 37  +/-
+
+myiSort :: Ord a => [a] -> [a] 
+myiSort [] = [] 
+myiSort (h:t) = insert2 h (myiSort t)
+
+insert2 :: Ord a => a -> [a] -> [a] 
+insert2 n [] = [n] 
+insert2 n (h:t) = if n <= h then n:h:t 
+               else h : insert2 n t  
+
+
+
+-- exercicio 38 
+
