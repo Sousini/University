@@ -484,3 +484,23 @@ aux90 (xi,yi) (xa,ya) (h:t) = if xi == xa && yi == ya then True
                              Sul -> aux90 (xi,yi) (xa,ya-1) t 
                              Oeste -> aux90 (xi,yi) (xa,ya-1) t 
                              Este -> aux90 (xi,yi) (xa,ya+1) t 
+
+
+
+
+-- exercicio 48
+
+type Ponto = (Float,Float) 
+data Rectangulo = Rect Ponto Ponto 
+
+contaQuadrados :: [Rectangulo] -> Int 
+contaQuadrados [] = 0 
+contaQuadrados ((Rect (x1,y1) (x2,y2)) :t) = if abs (x1-x2) == abs (y1-y2) then 1 + contaQuadrados  t  
+                                          else contaQuadrados t
+
+
+-- exercicio 49
+
+areaTotal :: [Rectangulo] -> Float 
+areaTotal [] = 0 
+areaTotal ((Rect (x1,y1)(x2,y2)):t) = abs (x1-x2) * abs (y1-y2) + areaTotal t 
