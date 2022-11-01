@@ -460,3 +460,27 @@ caminho (x,y) (x2,y2) | x > x2 = Oeste : caminho (x-1,y) (x2,y2)
                       | y > y2 = Sul : caminho (x,y-1) (x2,y2) 
                       | y < y2 = Norte : caminho (x,y+1) (x2,y2)
                       | otherwise = [] 
+
+
+-- exercicio 47 
+
+hasLoops :: (Int,Int) -> [Movimento] -> Bool 
+hasLoops (x,y) [] = False 
+hasLoops (x,y) (h:t) = case h of 
+                    Norte -> aux90 (x,y) (x,y+1) t 
+                    Sul -> aux90 (x,y) (x,y-1) t 
+                    Este -> aux90 (x,y) (x+1,y) t 
+                    Oeste -> aux90 (x,y) (x-1,y) t 
+                    
+
+
+
+aux90 :: (Int,Int) -> (Int,Int) -> [Movimento] -> Bool 
+aux90 (xi,yi) (xa,ya) [] = if xi == xa && yi == ya then True 
+                         else False 
+aux90 (xi,yi) (xa,ya) (h:t) = if xi == xa && yi == ya then True 
+                         else case h of 
+                             Norte -> aux90 (xi,yi) (xa,ya+1) t 
+                             Sul -> aux90 (xi,yi) (xa,ya-1) t 
+                             Oeste -> aux90 (xi,yi) (xa,ya-1) t 
+                             Este -> aux90 (xi,yi) (xa,ya+1) t 
