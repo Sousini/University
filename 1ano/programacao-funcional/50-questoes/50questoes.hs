@@ -424,7 +424,15 @@ myremoveMSet n ((x,y):t) | x == n && (y-1) > 0  = ((x,(y-1)):t)
 
 -- exercicio 43 
 
+constroiMSet :: Ord a => [a] -> [(a,Int)] 
+constroiMSet [] = [] 
+constroiMSet (h1:h2:t) = auxx 1 (h1:h2:t) 
 
+
+auxx :: Ord a => Int -> [a] -> [(a,Int)] 
+auxx acc [x] = [(x,acc)] 
+auxx acc (h1:h2:t) = if h1 == h2 then auxx (acc+1) (h2:t) 
+                   else (h1,acc) : auxx 1 (h2:t) 
 
 
 -- exercicio 44 ???
