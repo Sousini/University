@@ -503,4 +503,18 @@ contaQuadrados ((Rect (x1,y1) (x2,y2)) :t) = if abs (x1-x2) == abs (y1-y2) then 
 
 areaTotal :: [Rectangulo] -> Float 
 areaTotal [] = 0 
-areaTotal ((Rect (x1,y1)(x2,y2)):t) = abs (x1-x2) * abs (y1-y2) + areaTotal t 
+areaTotal ((Rect (x1,y1)(x2,y2)):t) = abs (x1-x2) * abs (y1-y2) + areaTotal t
+
+
+
+-- exercicio 50 
+
+data Equipamento = Bom | Razoavel | Avariado 
+                 deriving Show 
+
+
+naoReparar :: [Equipamento] -> Int 
+naoReparar [] = 0 
+naoReparar (h:t) = case h of 
+   Avariado -> naoReparar t 
+   _        -> 1 + naoReparar t 
