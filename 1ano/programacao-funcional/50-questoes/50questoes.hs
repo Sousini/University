@@ -440,3 +440,10 @@ mypartitionEithers (h:t) = case h of
 
 -- exercicio 45 
 
+mycatMaybes :: [Maybe a] -> [a] 
+mycatMaybes [] = [] 
+mycatMaybes (h:t) = case h of 
+       Just a -> a : mycatMaybes t 
+       Nothing -> mycatMaybes t 
+
+
