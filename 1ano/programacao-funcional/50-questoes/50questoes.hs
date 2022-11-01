@@ -418,3 +418,25 @@ myremoveMSet n [] = []
 myremoveMSet n ((x,y):t) | x == n && (y-1) > 0  = ((x,(y-1)):t)
                          | x == n && (y-1) == 0 = t 
                          | otherwise = (x,y) : myremoveMSet n t 
+
+
+
+
+-- exercicio 43 
+
+
+
+
+-- exercicio 44 ???
+
+mypartitionEithers :: [Either a b] -> ([a],[b]) 
+mypartitionEithers [] = ([],[])
+mypartitionEithers (h:t) = case h of 
+      Left a -> (a:x,y)
+      Right b -> (x, b:y) 
+    where (x,y) = mypartitionEithers t  
+
+
+
+-- exercicio 45 
+
