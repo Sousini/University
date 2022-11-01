@@ -447,3 +447,16 @@ mycatMaybes (h:t) = case h of
        Nothing -> mycatMaybes t 
 
 
+
+-- exercicio 46 
+
+data Movimento = Norte | Sul | Este | Oeste 
+               deriving Show 
+
+
+caminho :: (Int,Int) -> (Int,Int) -> [Movimento] 
+caminho (x,y) (x2,y2) | x > x2 = Oeste : caminho (x-1,y) (x2,y2) 
+                      | x < x2 = Este : caminho (x+1,y) (x2,y2) 
+                      | y > y2 = Sul : caminho (x,y-1) (x2,y2) 
+                      | y < y2 = Norte : caminho (x,y+1) (x2,y2)
+                      | otherwise = [] 
