@@ -433,7 +433,7 @@ auxx acc (h1:h2:t) = if h1 == h2 then auxx (acc+1) (h2:t)
                    else (h1,acc) : auxx 1 (h2:t) 
 
 
--- exercicio 44 ???
+-- exercicio 44 
 
 mypartitionEithers :: [Either a b] -> ([a],[b]) 
 mypartitionEithers [] = ([],[])
