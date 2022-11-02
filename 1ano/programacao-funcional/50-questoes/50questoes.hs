@@ -244,15 +244,13 @@ aux'' x n (h:t) = if n == h then x : aux'' (x+1) n t
 
 mynub :: Eq a => [a] -> [a] 
 mynub [] = [] 
-mynub (h:t) = if pertence h t then  mynub t 
-             else h : mynub t 
+mynub (h:t) = if repete h t then mynub t 
+            else h : mynub t 
 
-
-
-pertence :: Eq a => a -> [a] -> Bool 
-pertence x [] = False 
-pertence x (h:t) = if x == h then True
-                 else pertence x t
+repete :: Eq a => a -> [a] -> Bool 
+repete n [] = False 
+repete n (h:t) = if n == h then True 
+               else repete n t
 
 
 -- exercicio 27 
