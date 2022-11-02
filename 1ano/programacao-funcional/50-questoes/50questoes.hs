@@ -329,7 +329,7 @@ myunlines (h:t) = h ++ "\n" ++ myunlines t
 
 
 
--- exercicio 34 ?
+-- exercicio 34
 
 mypMaior :: Ord a => [a] -> Int 
 mypMaior (h:t) = aux''' h t 0 1  
