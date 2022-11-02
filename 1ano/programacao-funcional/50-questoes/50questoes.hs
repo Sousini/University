@@ -332,13 +332,12 @@ myunlines (h:t) = h ++ "\n" ++ myunlines t
 -- exercicio 34 ?
 
 mypMaior :: Ord a => [a] -> Int 
-mypMaior (h:t) = aux2 h t 0 1 
+mypMaior (h:t) = aux''' h t 0 1  
 
-
-aux2 :: Ord a => a -> [a] -> Int -> Int -> Int
-aux2 n [] x m = x 
-aux2 n (h:t) x m = if h > n then aux2 h t m (m+1) 
-                 else aux2 n t x (m+1)  
+aux''' :: Ord a => a -> [a] -> Int -> Int -> Int  
+aux''' n [] x m = x  
+aux''' n (h:t) x m = if h > n then aux''' h t m (m+1) 
+                  else aux''' n t x (m+1)  
  
 
 
