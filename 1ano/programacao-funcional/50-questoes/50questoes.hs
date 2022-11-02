@@ -358,16 +358,16 @@ mypreCrescente (x:y:t) = if x <= y then x : mypreCrescente (y:t)
                         else [x] 
 
 
--- exercicio 37  +/-
+-- exercicio 37  
 
-myiSort :: Ord a => [a] -> [a] 
-myiSort [] = [] 
-myiSort (h:t) = insert2 h (myiSort t)
+iSort' :: Ord a => [a] -> [a] 
+iSort' [] = [] 
+iSort' (h:t) = insert' h (iSort' t)
 
-insert2 :: Ord a => a -> [a] -> [a] 
-insert2 n [] = [n] 
-insert2 n (h:t) = if n <= h then n:h:t 
-               else h : insert2 n t  
+insert' :: Ord a => a -> [a] -> [a] 
+insert' n [] = [n] 
+insert' n (h:t) = if n <= h then n : h : t 
+               else h : insert' n t 
 
 
 
