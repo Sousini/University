@@ -226,16 +226,17 @@ myisSubsequenceOf (x:xs) (h:t) = if x == h then myisSubsequenceOf xs t
                                 else myisSubsequenceOf (x:xs) t
 
 
--- exercicio 25 ? +/-
+-- exercicio 25 
 
 myelemIndices :: Eq a => a -> [a] -> [Int] 
 myelemIndices n [] = [] 
-myelemIndices n l = aux n l 0 
+myelemIndices n l = aux 0 n l
 
-aux :: Eq a => a -> [a] -> Int -> [Int]
-aux a [] n = [] 
-aux a (h:t) n = if a == h then n : aux a t (n+1) 
-               else aux a t (n+1) 
+
+aux :: Eq a => Int -> a -> [a] -> [Int] 
+aux x n [] = [] 
+aux x n (h:t) = if n == h then x : aux (x+1) n t 
+              else aux (x+1) n t 
 
 
 
