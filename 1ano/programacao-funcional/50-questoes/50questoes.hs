@@ -230,13 +230,13 @@ myisSubsequenceOf (x:xs) (h:t) = if x == h then myisSubsequenceOf xs t
 
 myelemIndices :: Eq a => a -> [a] -> [Int] 
 myelemIndices n [] = [] 
-myelemIndices n l = aux 0 n l
+myelemIndices n l = aux'' 0 n l
 
 
-aux :: Eq a => Int -> a -> [a] -> [Int] 
-aux x n [] = [] 
-aux x n (h:t) = if n == h then x : aux (x+1) n t 
-              else aux (x+1) n t 
+aux'' :: Eq a => Int -> a -> [a] -> [Int] 
+aux'' x n [] = [] 
+aux'' x n (h:t) = if n == h then x : aux'' (x+1) n t 
+              else aux'' (x+1) n t 
 
 
 
