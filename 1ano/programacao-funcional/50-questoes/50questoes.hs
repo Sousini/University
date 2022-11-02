@@ -240,7 +240,7 @@ aux'' x n (h:t) = if n == h then x : aux'' (x+1) n t
 
 
 
--- exercicio 26 ? +/- 
+-- exercicio 26 
 
 mynub :: Eq a => [a] -> [a] 
 mynub [] = [] 
