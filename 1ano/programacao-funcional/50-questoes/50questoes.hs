@@ -91,15 +91,14 @@ myintersperse x [a] = [a]
 myintersperse x (h:t) = h : x : myintersperse x t 
 
 
--- exercicio 11 ?
+-- exercicio 11 
 
 mygroup :: Eq a => [a] -> [[a]] 
 mygroup [] = [] 
 mygroup [x] = [[x]] 
-mygroup (h:t) = let ((x:xs):y) = mygroup t 
-                in if h == x then (h:x:xs) : y 
-                else [h] : (x:xs) : y  
-            
+mygroup (h:t) = if h == x then (h:x:xs):y 
+            else [h] : (x:xs) : y  
+    where ((x:xs):y) = mygroup t
 
 
 
