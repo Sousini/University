@@ -39,4 +39,12 @@ span' _ [] = ([],[])
 span' f (h:t) = if f h then (h:lt, ld) 
              else ([], h:t) 
           where (lt,ld) = span' f t 
-          
+
+
+-- f 
+
+deleteBy' :: (a -> a -> Bool) -> a -> [a] -> [a] 
+deleteBy' _ _ [] = [] 
+deleteBy' f x (h:t) = if f x h then t
+                   else h : deleteBy' f x t  
+
