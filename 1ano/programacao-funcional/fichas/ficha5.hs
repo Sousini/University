@@ -48,3 +48,9 @@ deleteBy' _ _ [] = []
 deleteBy' f x (h:t) = if f x h then t
                    else h : deleteBy' f x t  
 
+
+-- g 
+
+sortOn' :: Ord b => (a -> b) -> [a] -> [a] 
+sortOn' _ [] = [] 
+sortOn' f (h:t) = 
