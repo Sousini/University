@@ -29,3 +29,14 @@ dropWhile' :: (a -> Bool) -> [a] -> [a]
 dropWhile' _ [] = [] 
 dropWhile' f (h:t) = if f h then dropWhile' f t 
                    else h:t 
+
+
+
+-- e 
+
+span' :: (a -> Bool) -> [a] -> ([a],[a]) 
+span' _ [] = ([],[]) 
+span' f (h:t) = if f h then (h:lt, ld) 
+             else ([], h:t) 
+          where (lt,ld) = span' f t 
+          
