@@ -14,4 +14,11 @@ any' p (h:t) = p h || any' p t
 zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c] 
 zipWith' _ _ [] = [] 
 zipWith' _ [] _ = [] 
-zipWith' f (h:t) (x:xs) = f h x : zipWith' f t xs
+zipWith' f (h:t) (x:xs) = f h x : zipWith' f t xs 
+
+-- c 
+
+takeWhile' :: (a -> Bool) -> [a] -> [a] 
+takeWhile' _ [] = [] 
+takeWhile' f (h:t) = if f h then h : takeWhile' f t 
+                   else [] 
