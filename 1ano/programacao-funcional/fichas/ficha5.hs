@@ -21,4 +21,11 @@ zipWith' f (h:t) (x:xs) = f h x : zipWith' f t xs
 takeWhile' :: (a -> Bool) -> [a] -> [a] 
 takeWhile' _ [] = [] 
 takeWhile' f (h:t) = if f h then h : takeWhile' f t 
-                   else [] 
+                   else []  
+
+-- d 
+
+dropWhile' :: (a -> Bool) -> [a] -> [a] 
+dropWhile' _ [] = [] 
+dropWhile' f (h:t) = if f h then dropWhile' f t 
+                   else h:t 
