@@ -12,4 +12,6 @@ any' p (h:t) = p h || any' p t
 -- b 
 
 zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c] 
-zipWith' 
+zipWith' _ _ [] = [] 
+zipWith' _ [] _ = [] 
+zipWith' f (h:t) (x:xs) = f h x : zipWith' f t xs
