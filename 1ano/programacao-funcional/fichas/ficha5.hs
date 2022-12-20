@@ -53,4 +53,21 @@ deleteBy' f x (h:t) = if f x h then t
 
 sortOn' :: Ord b => (a -> b) -> [a] -> [a] 
 sortOn' _ [] = [] 
-sortOn' f (h:t) = 
+-- sortOn' f (h:t) = 
+
+
+-- Questão 2 
+
+type Polinomio = [Monomio] 
+type Monomio = (Float,Int) 
+
+-- a 
+
+selgrau :: Int -> Polinomio -> Polinomio 
+selgrau n [] = [] 
+selgrau n ((c,e):t) = if n == e then (c,e) : selgrau n t 
+                   else selgrau n t  
+
+
+-- b 
+
