@@ -18,4 +18,12 @@ intersect' (h:t) l = if ocorre h l then h : intersect' t l
 ocorre :: Eq a => a -> [a] -> Bool 
 ocorre _ [] = False 
 ocorre n (h:t) = if n == h then True 
-               else ocorre n t 
+               else ocorre n t  
+
+
+-- b 
+
+tails' :: [a] -> [[a]] 
+tails' [] = [[]] 
+tails' (h:t) = (h:t) : tails' t  
+
