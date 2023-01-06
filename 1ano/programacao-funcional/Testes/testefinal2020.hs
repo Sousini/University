@@ -1,6 +1,7 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Redundant if" #-}
 import Control.Applicative (Applicative(liftA2))
+import Data.Time.Format.ISO8601 (recurringIntervalFormat)
 
 
 
@@ -26,4 +27,18 @@ ocorre n (h:t) = if n == h then True
 tails' :: [a] -> [[a]] 
 tails' [] = [[]] 
 tails' (h:t) = (h:t) : tails' t  
+
+-- Questão 2 
+
+type ConjInt = [Intervalo] 
+type Intervalo = (Int,Int) 
+
+
+-- a 
+
+elems :: ConjInt -> [Int] 
+elems [] = [] 
+elems ((a,b):t) | a == b = a : elems t 
+                | a < b = a : elems ((a+1,b) :t) 
+
 
