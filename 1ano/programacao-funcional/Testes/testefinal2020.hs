@@ -42,3 +42,9 @@ elems ((a,b):t) | a == b = a : elems t
                 | a < b = a : elems ((a+1,b) :t) 
 
 
+-- b 
+
+geraconj :: [Int] -> ConjInt 
+geraconj [] = [] 
+geraconj 
+
