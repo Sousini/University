@@ -42,9 +42,21 @@ elems ((a,b):t) | a == b = a : elems t
                 | a < b = a : elems ((a+1,b) :t) 
 
 
--- b 
+-- b ????????
 
 geraconj :: [Int] -> ConjInt 
 geraconj [] = [] 
-geraconj 
+geraconj l = let a = groupBy (\ x y -> x == y-1) l 
+                 b = map convInt a 
+             in b 
+
+convInt :: [Int] -> Intervalo 
+convInt l = (head l, last l) 
+
+groupBy :: (a -> a -> Bool) -> [a] -> [[a]] 
+groupBy _ []       = [] 
+groupBy eq (x:xs) = (x:ys) : groupBy eq zs 
+   where (ys,zs) = span (eq x) xs
+
+
 
