@@ -77,3 +77,11 @@ type Agenda = [(Nome, [Contacto])]
 acrescEmail :: Nome -> String -> Agenda -> Agenda 
 acrescEmail nome email [] = [(nome, [Email email])]
 acrescEmail nome email agenda = agenda ++ [(nome, [Email email])]
+
+
+-- b 
+
+verEmails :: Nome -> Agenda -> Maybe [String] 
+verEmails _ [] = Nothing 
+verEmails nome ((n,contacto):t) = if n == nome then Just (map (\ (Email e)-> e) contacto) 
+                         else Nothing 
