@@ -60,3 +60,20 @@ groupBy eq (x:xs) = (x:ys) : groupBy eq zs
 
 
 
+-- Questão 3 
+
+data Contacto = Casa Integer 
+              | Trab Integer 
+              | Tlm Integer 
+              | Email String 
+    deriving (Show) 
+
+type Nome = String 
+type Agenda = [(Nome, [Contacto])] 
+
+
+--  a 
+
+acrescEmail :: Nome -> String -> Agenda -> Agenda 
+acrescEmail nome email [] = [(nome, [Email email])]
+acrescEmail nome email agenda = agenda ++ [(nome, [Email email])]
