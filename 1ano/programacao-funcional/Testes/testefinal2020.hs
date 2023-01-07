@@ -1,7 +1,9 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Redundant if" #-}
+{-# HLINT ignore "Used otherwise as a pattern" #-}
 import Control.Applicative (Applicative(liftA2))
 import Data.Time.Format.ISO8601 (recurringIntervalFormat)
+import Control.Monad.RWS.Strict (Any(getAny))
 
 
 
@@ -85,3 +87,20 @@ verEmails :: Nome -> Agenda -> Maybe [String]
 verEmails _ [] = Nothing 
 verEmails nome ((n,contacto):t) = if n == nome then Just (map (\ (Email e)-> e) contacto) 
                          else Nothing 
+
+
+-- c 
+
+consulta :: [Contacto] -> ([Integer], [String]) 
+consulta = foldr (\x (i,s) -> case x of Email email -> (i,email:s); otherwise -> (n x : i,s)) ([],[]) 
+                  where n x = case x of Casa num1 -> num1 
+                                        Trab num2 -> num2
+                                        Tlm num3 -> num3  
+
+
+-- d ???
+
+
+
+                      
+                     
