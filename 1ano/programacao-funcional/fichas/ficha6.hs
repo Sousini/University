@@ -55,4 +55,13 @@ mirror (Node x e d) = Node x (mirror d) (mirror e)
 
 zipWithBT :: (a -> b -> c) -> BTree a -> BTree b -> BTree c 
 zipWithBT f Empty _ = Empty 
-zip
+zipWithBT f _ Empty = Empty 
+zipWithBT f (Node x e d) (Node n e1 d1) = Node (f x n) (zipWithBT f e e1) (zipWithBT f d d1) 
+
+-- h 
+
+unzipBT :: BTree (a,b,c) -> (BTree a,BTree b,BTree c) 
+unzipBT Empty = (Empty, Empty, Empty)
+unzipBT (Node (a,b,c) e d) = (Node a e1 d1, Node b e2 d2, Node c e3 d3) 
+                  where (e1,e2,e3) = unzipBT e 
+                        (d1,d2,d3) = unzipBT d 
