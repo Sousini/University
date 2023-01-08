@@ -53,7 +53,7 @@ deleteBy' f x (h:t) = if f x h then t
 
 sortOn' :: Ord b => (a -> b) -> [a] -> [a] 
 sortOn' _ [] = [] 
--- sortOn' f (h:t) = 
+--sortOn' f (h:t) = 
 
 
 -- Questão 2 
@@ -70,4 +70,15 @@ selgrau n ((c,e):t) = if n == e then (c,e) : selgrau n t
 
 
 -- b 
+
+conta :: Int -> Polinomio -> Int 
+conta n [] = 0  
+conta n ((c,e):t) = if n == e then 1 + conta n t 
+                  else conta n t  
+
+
+-- c 
+
+grau :: Polinomio -> Int 
+grau p =  maximum (map snd p)
 
