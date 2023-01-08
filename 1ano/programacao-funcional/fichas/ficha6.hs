@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-overlapping-patterns #-}
+import Prelude hiding (minimum)
 
 
 
@@ -71,6 +73,16 @@ unzipBT (Node (a,b,c) e d) = (Node a e1 d1, Node b e2 d2, Node c e3 d3)
 
 -- a 
 
-minimo :: Ord a => BTree a -> a 
-minimo (Node x Empty Empty) = x 
-minimo (Node x e d) =
+minimum :: Ord a => BTree a -> a 
+--minimo (Node x Empty Empty) = x 
+--minimo (Node x e d) =  
+minimum Empty = error "Cannot find minimum of empty tree"
+minimum (Node x left right) = x
+minimum (Node x left right) = min (minimum left) (minimum right) 
+
+
+arvT :: BTree Int 
+arvT = Node (7, "Ana",17) 
+            (Node (5, "Rui", 10)
+                  (Node (3,"Ze",14) Empty Empty)
+                        (Node 2, "Joao", 18) Empty Empty)
