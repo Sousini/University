@@ -65,3 +65,12 @@ unzipBT Empty = (Empty, Empty, Empty)
 unzipBT (Node (a,b,c) e d) = (Node a e1 d1, Node b e2 d2, Node c e3 d3) 
                   where (e1,e2,e3) = unzipBT e 
                         (d1,d2,d3) = unzipBT d 
+
+
+-- Questão 2 
+
+-- a 
+
+minimo :: Ord a => BTree a -> a 
+minimo (Node x Empty Empty) = x 
+minimo (Node x e d) =
