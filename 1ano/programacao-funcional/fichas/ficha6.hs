@@ -75,8 +75,21 @@ unzipBT (Node (a,b,c) e d) = (Node a e1 d1, Node b e2 d2, Node c e3 d3)
 
 minimo :: Ord a => BTree a -> a 
 minimo (Node x Empty d) = x 
-minimo (Node x e d) = minimo e
+minimo (Node x e d) = minimo e 
 
+
+-- b 
+
+semMinimo :: Ord a => BTree a -> BTree a 
+semMinimo (Node x Empty d) = d
+semMinimo (Node x e d) = Node x (semMinimo e) d    
+
+
+-- c 
+
+minSmin :: Ord a => BTree a -> (a,BTree a) 
+minSmin (Node x Empty  d) = (x, d) 
+minSmin (Node x e d )     =  let (m,sm) = minSmin e in (m, Node x sm d)
 
 
 
