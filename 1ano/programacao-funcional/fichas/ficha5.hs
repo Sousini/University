@@ -66,17 +66,12 @@ type Monomio = (Float,Int)
 -- a 
 
 selgrau :: Int -> Polinomio -> Polinomio 
-selgrau n [] = [] 
-selgrau n ((c,e):t) = if n == e then (c,e) : selgrau n t 
-                   else selgrau n t  
+
 
 
 -- b 
 
 conta :: Int -> Polinomio -> Int 
-conta n [] = 0  
-conta n ((c,e):t) = if n == e then 1 + conta n t 
-                  else conta n t  
 
 
 -- c 
