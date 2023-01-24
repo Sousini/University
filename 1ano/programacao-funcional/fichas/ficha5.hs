@@ -72,11 +72,18 @@ selgrau n l = filter (\x -> snd x == n) l
 -- b 
 
 conta :: Int -> Polinomio -> Int 
-conta n l = foldr (\x -> if n == snd x then conta + 1 else conta) 0 l  
+conta n l = foldr (\x conta -> if n == snd x then conta + 1 else conta) 0 l  
 
 
 -- c 
 
 grau :: Polinomio -> Int 
-grau p =  maximum (map snd p)
+grau p =  maximum (map snd p) 
+
+
+-- d 
+
+deriv :: Polinomio -> Polinomio 
+deriv l = let l = map (\(x,y) -> if y > 0 then (x*fromIntegral (y, y-1)) else (0,0)) l
+          in filter (/= (0,0)) l 
 
