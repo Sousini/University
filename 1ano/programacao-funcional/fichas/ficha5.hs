@@ -84,6 +84,12 @@ grau p =  maximum (map snd p)
 -- d 
 
 deriv :: Polinomio -> Polinomio 
-deriv l = let l = map (\(x,y) -> if y > 0 then (x*fromIntegral (y, y-1)) else (0,0)) l
-          in filter (/= (0,0)) l 
+deriv p = let l = map (\(x,y) -> if y > 0 then (x*fromIntegral (y), y-1) else (0,0)) p
+          in filter (/= (0,0)) l  
+
+
+-- e 
+
+calcula :: Float -> Polinomio -> Float
+calcula n p = foldr (\(x,y) acc -> if x /= 0 then (x*(n)^y) + acc else 0) 0 p
 
