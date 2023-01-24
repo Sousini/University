@@ -98,3 +98,9 @@ calcula n p = foldr (\(x,y) acc -> if x /= 0 then (x*(n)^y) + acc else 0) 0 p
 
 simp :: Polinomio -> Polinomio 
 simp p = filter (\x -> fst x/= 0) p 
+
+
+-- g 
+
+mult :: Monomio -> Polinomio -> Polinomio 
+mult (c,e) p = map (\(c2,e2) -> (c*c2,e+e2)) p  
