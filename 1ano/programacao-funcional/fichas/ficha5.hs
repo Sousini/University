@@ -93,3 +93,8 @@ deriv p = let l = map (\(x,y) -> if y > 0 then (x*fromIntegral (y), y-1) else (0
 calcula :: Float -> Polinomio -> Float
 calcula n p = foldr (\(x,y) acc -> if x /= 0 then (x*(n)^y) + acc else 0) 0 p
 
+
+-- f 
+
+simp :: Polinomio -> Polinomio 
+simp p = filter (\x -> fst x/= 0) p 
