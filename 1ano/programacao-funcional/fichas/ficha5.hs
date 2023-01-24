@@ -66,12 +66,12 @@ type Monomio = (Float,Int)
 -- a 
 
 selgrau :: Int -> Polinomio -> Polinomio 
-
+selgrau n l = filter (\x -> snd x == n) l 
 
 
 -- b 
 
-conta :: Int -> Polinomio -> Int 
+--conta :: Int -> Polinomio -> Int 
 
 
 -- c 
