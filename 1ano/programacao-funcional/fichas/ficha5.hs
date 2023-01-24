@@ -53,8 +53,7 @@ deleteBy' f x (h:t) = if f x h then t
 
 sortOn' :: Ord b => (a -> b) -> [a] -> [a] 
 sortOn' _ [] = [] 
---sortOn' f (h:t) = wdasda 
-adsad
+--sortOn' f (h:t) = 
 
 
 -- Questão 2 
