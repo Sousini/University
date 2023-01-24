@@ -53,8 +53,10 @@ deleteBy' f x (h:t) = if f x h then t
 
 sortOn' :: Ord b => (a -> b) -> [a] -> [a] 
 sortOn' _ [] = [] 
---sortOn' f (h:t) = 
-
+sortOn' f (h:t) = aux f h (sortOn' f t)
+                  where aux :: Ord b => (a -> b) -> a -> [a] -> [a]
+                        aux f x [] = [x]
+                        aux f x (a:b) = if f x > f a then a : aux f x b else x : a : b
 
 -- Questão 2 
 
