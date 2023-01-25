@@ -157,4 +157,5 @@ dimMat (m:t) = (length m, length (m:t))
 -- c 
 
 addMat :: Num a => Mat a -> Mat a -> Mat a 
-addMat 
+addMat m1 m2= zipWith' (\l1 l2 -> zipWith' (+) l1 l2) m1 m2 
+
