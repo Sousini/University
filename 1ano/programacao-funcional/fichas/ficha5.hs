@@ -78,7 +78,7 @@ conta n l = foldr (\x conta -> if n == snd x then conta + 1 else conta) 0 l
 -- c 
 
 grau :: Polinomio -> Int 
-grau p =  maximum (map snd p) 
+grau p = maximum (map snd p) 
 
 
 -- d 
@@ -113,14 +113,20 @@ ordena p = sortOn' snd p
 
 
 
--- i 
+-- i ?? 
 
 normaliza :: Polinomio -> Polinomio 
-normaliza p = let x = fromIntegral $ grau p in [ ((a/x),b) | (a,b) <- p] 
+normaliza l = let x = fromIntegral $ grau l in [ ((a/x),b) | (a,b) <- l]
 
 
--- j 
+-- j ??
 
 soma :: Polinomio -> Polinomio -> Polinomio 
 soma pol1 pol2 = normaliza $ (++) pol1 pol2 
---soma l p = normaliza ((++) l p )
+--soma l p = normaliza ((++) l p ) 
+
+
+-- k 
+
+produto :: Polinomio -> Polinomio -> Polinomio 
+produto pol1 pol2 = 
