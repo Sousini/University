@@ -104,3 +104,13 @@ simp p = filter (\x -> fst x/= 0) p
 
 mult :: Monomio -> Polinomio -> Polinomio 
 mult (c,e) p = map (\(c2,e2) -> (c*c2,e+e2)) p  
+
+
+-- h 
+
+ordena :: Polinomio -> Polinomio 
+ordena p = foldr aux [] p 
+       where aux :: Monomio -> Polinomio -> Polinomio 
+             aux (c,e) [] = [(c,e)] 
+             aux (c,e) ((c2,e2) : t) = if e < e2 then (c,e) : (c2,e2) : t 
+                                    else (c2,e2) : aux (c,e) t 
