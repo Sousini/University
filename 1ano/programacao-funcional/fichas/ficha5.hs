@@ -117,3 +117,10 @@ ordena p = sortOn' snd p
 
 normaliza :: Polinomio -> Polinomio 
 normaliza p = let x = fromIntegral $ grau p in [ ((a/x),b) | (a,b) <- p] 
+
+
+-- j 
+
+soma :: Polinomio -> Polinomio -> Polinomio 
+soma pol1 pol2 = normaliza $ (++) pol1 pol2 
+--soma l p = normaliza ((++) l p )
