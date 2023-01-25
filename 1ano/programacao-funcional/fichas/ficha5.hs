@@ -129,4 +129,32 @@ soma pol1 pol2 = normaliza $ (++) pol1 pol2
 -- k 
 
 produto :: Polinomio -> Polinomio -> Polinomio 
-produto pol1 pol2 = 
+produto pol1 pol2 = foldr mult pol1 pol2 
+
+
+-- l 
+
+equiv :: Polinomio -> Polinomio -> Bool 
+equiv pol1 pol2 = ordena(normaliza pol1) == ordena (normaliza pol2) 
+
+
+-- Questão 3 
+
+type Mat a = [[a]] 
+
+-- a 
+
+dimOK :: Mat a -> Bool 
+dimOK (m:t) = all (\l1 -> length m == length l1) t   
+
+
+-- b 
+
+dimMat :: Mat a -> (Int,Int) 
+dimMat (m:t) = (length m, length (m:t)) 
+
+
+-- c 
+
+addMat :: Num a => Mat a -> Mat a -> Mat a 
+addMat 
