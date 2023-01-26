@@ -1,3 +1,6 @@
+import Data.Char
+import Data.List
+
 
 -- Exercicio 1 
 
@@ -46,6 +49,32 @@ max2 n m = if n > m then n
 max3 :: Int -> Int -> Int -> Int 
 max3 x y z = max2 (max2 x y) z  
 
+
+
+
+-- Exercicio 2 
+
+-- a 
+nRaizes :: Float -> Float -> Float -> Int 
+nRaizes x y z | delta1 < 0 = 0 
+              | delta1 == 0 = 1 
+              | delta1 > 0 = 2 
+              where delta1 = (y^2) - 4*x*z  
+
+
+-- b 
+raizes :: Float -> Float -> Float -> [Float] 
+raizes x y z |delta2 < 0 = []
+             | delta2 == 0 = [r]
+             | delta2 > 0 = [r1,r2]
+             where
+                delta2 = (y^2-4*x*z) 
+                r= (-y)/(2*x)
+                r1= ((-y)+sqrt delta2)/(2*x)
+                r2= ((-y)-sqrt delta2)/(2*x)
+
+
+                
 -- Exercicio 3
 
 type Hora = (Int,Int)
