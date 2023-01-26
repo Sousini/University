@@ -166,5 +166,12 @@ transpose' :: Mat a -> Mat a
 transpose' ([]:_) = []  
 transpose' m = let l = map head m 
                    p = map tail m 
-               in l : transpose' p 
-               
+               in l : transpose' p  
+
+
+
+-- e 
+
+multMat :: Num a => Mat a -> Mat a -> Mat a 
+multMat m1 m2 = zipWith' (\l1 l2 -> zipWith' (*) l1 l2) m1 m2 
+
