@@ -37,7 +37,14 @@ truncaImpar l = if mod (length l) 2 == 0 then l
 
 max2 :: Int -> Int -> Int 
 max2 n m = if n > m then n 
-         else m 
+         else m  
+
+
+
+-- g 
+
+max3 :: Int -> Int -> Int -> Int 
+max3 x y z = max2 (max2 x y) z  
 
 -- Exercicio 3
 
