@@ -74,7 +74,7 @@ raizes x y z |delta2 < 0 = []
                 r2= ((-y)-sqrt delta2)/(2*x)
 
 
-                
+
 -- Exercicio 3
 
 type Hora = (Int,Int)
@@ -124,6 +124,10 @@ adicionaMinutos m h = minutosParaHora (m + horaParaMinutos h)
 
 
 
+-- Exercício 4 
+
+
+
 
 
 
@@ -158,14 +162,27 @@ safe    _ _        = False
 
 -- Exercício 6 
 
---data Ponto = Cartesiano Double Double | Polar Double Double
-             --deriving (Show,Eq)
+data Ponto = Cartesiano Double Double | Polar Double Double
+             deriving (Show,Eq)
 
 
 -- a 
 
---posx :: Ponto -> Double 
---posx 
+posx :: Ponto -> Double 
+posx (Cartesiano x1 y1) = x1 
+posx (Polar d a) =  d * (cos a) 
+
+
+-- b 
+
+posy :: Ponto -> Double 
+posy (Cartesiano x1 y1) = y1 
+posy (Polar d a) = d + (sin a)  
+
+
+-- c 
+
+raio 
 
 
 
