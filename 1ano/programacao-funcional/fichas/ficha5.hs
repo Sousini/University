@@ -181,3 +181,14 @@ multMat m1 m2 = zipWith' (\l1 l2 -> zipWith' (*) l1 l2) m1 m2
 
 zipWMat :: (a -> b -> c) -> Mat a -> Mat b -> Mat c 
 zipWMat f m1 m2 = zipWith' (\l1 l2 -> zipWith' f l1 l2) m1 m2  
+
+
+-- g ?? 
+
+triSup :: Num a => Mat a -> Bool 
+triSup [] = True 
+triSup (h:t) = let l = map head t
+                   rm = map tail t
+               in all (==0) l && triSup rm
+
+
