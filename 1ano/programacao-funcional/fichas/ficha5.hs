@@ -185,10 +185,17 @@ zipWMat f m1 m2 = zipWith' (\l1 l2 -> zipWith' f l1 l2) m1 m2
 
 -- g ?? 
 
-triSup :: Num a => Mat a -> Bool 
+triSup :: (Num a, Eq a) => Mat a -> Bool 
 triSup [] = True 
 triSup (h:t) = let l = map head t
                    rm = map tail t
                in all (==0) l && triSup rm
 
 
+-- h 
+
+rotateLeft :: Mat a -> Mat a 
+rotateLeft ([]:_) = [] 
+rotateLeft m = let l = map last m 
+                   p = map init m 
+               in l : rotateLeft p  
