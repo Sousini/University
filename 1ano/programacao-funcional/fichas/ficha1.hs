@@ -27,6 +27,11 @@ multiplo m n = mod m n == 0
 
 -- e 
 
+truncaImpar :: [a] -> [a] 
+truncaImpar [] = [] 
+truncaImpar l = if mod (length l) 2 == 0 then l 
+                else tail l  
+
 
 
 -- Exercicio 3
