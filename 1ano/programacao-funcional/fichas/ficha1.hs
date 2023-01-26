@@ -1,9 +1,36 @@
 
--- 
+-- Exercicio 1 
+
+-- a 
+
+perimetro :: Float -> Float 
+perimetro x = 2*pi*x  
+
+
+-- b 
+
+dist' :: (Double, Double) -> (Double, Double) -> Double 
+dist' (x,y) (xs,ys) = sqrt ((x-xs)^2 + (y-ys)^2) 
+
+
+-- c 
+
+primUlt :: [a] -> (a,a) 
+primUlt l = (head l, last l) 
+
+
+-- d 
+
+multiplo :: Int -> Int -> Bool 
+multiplo m n = mod m n == 0   
+
+
+-- e 
+
+
 
 -- Exercicio 3
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Redundant bracket" #-}
+
 type Hora = (Int,Int)
 meiaNoiteEUmQuarto :: Hora
 meiaNoiteEUmQuarto = (0,15)
@@ -85,14 +112,14 @@ safe    _ _        = False
 
 -- Exercício 6 
 
-data Ponto = Cartesiano Double Double | Polar Double Double
-             deriving (Show,Eq)
+--data Ponto = Cartesiano Double Double | Polar Double Double
+             --deriving (Show,Eq)
 
 
 -- a 
 
-posx :: Ponto -> Double 
-posx 
+--posx :: Ponto -> Double 
+--posx 
 
 
 
