@@ -175,3 +175,9 @@ transpose' m = let l = map head m
 multMat :: Num a => Mat a -> Mat a -> Mat a 
 multMat m1 m2 = zipWith' (\l1 l2 -> zipWith' (*) l1 l2) m1 m2 
 
+
+
+-- f 
+
+zipWMat :: (a -> b -> c) -> Mat a -> Mat b -> Mat c 
+zipWMat f m1 m2 = zipWith' (\l1 l2 -> zipWith' f l1 l2) m1 m2  
