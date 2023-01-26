@@ -30,9 +30,14 @@ multiplo m n = mod m n == 0
 truncaImpar :: [a] -> [a] 
 truncaImpar [] = [] 
 truncaImpar l = if mod (length l) 2 == 0 then l 
-                else tail l  
+                else tail l   
 
 
+-- f 
+
+max2 :: Int -> Int -> Int 
+max2 n m = if n > m then n 
+         else m 
 
 -- Exercicio 3
 
