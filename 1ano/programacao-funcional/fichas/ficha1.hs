@@ -83,6 +83,16 @@ safe    Vermelho _ = True
 safe    _ _        = False 
 
 
+-- Exercício 6 
+
+data Ponto = Cartesiano Double Double | Polar Double Double
+             deriving (Show,Eq)
+
+
+-- a 
+
+posx :: Ponto -> Double 
+posx 
 
 
 
