@@ -159,3 +159,12 @@ dimMat (m:t) = (length m, length (m:t))
 addMat :: Num a => Mat a -> Mat a -> Mat a 
 addMat m1 m2= zipWith' (\l1 l2 -> zipWith' (+) l1 l2) m1 m2 
 
+
+-- d 
+
+transpose' :: Mat a -> Mat a 
+transpose' ([]:_) = []  
+transpose' m = let l = map head m 
+                   p = map tail m 
+               in l : transpose' p 
+               
