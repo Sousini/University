@@ -183,9 +183,32 @@ posy (Polar d a) = d + (sin a)
 -- c 
 
 raio :: Ponto -> Double 
-raio (Cartesiano x1  y1) =  
+raio (Cartesiano x1  y1) = sqrt (x1^2 + y1^2)
 raio (Polar d a) = d 
 
+
+-- d 
+
+angulo :: Ponto -> Double 
+angulo (Cartesiano x1 y1) |x1==0 && y1==0 =0
+                          |x1==0 && y1>0 = pi/2
+                          |x1==0 && y1<0 = -pi/2
+                          |x1>0 = atan (y1/x1)
+                          |x1<0 && y1>=0 = atan (y1/x1) + pi
+                          |x1<0 && y1<0 = atan (y1/x1) - pi 
+angulo (Polar d a) = a 
+
+
+-- e 
+
+dist'' :: Ponto -> Ponto -> Double 
+dist'' (Cartesiano x1 y1) (Cartesiano x2 y2) = sqrt ((x1-x2)^2+(y1-y2)^2)
+dist'' (Polar d1 a1) (Polar d2 a2) = sqrt((px1-px2)^2+(py1-py2)^2)
+                                   where 
+                                   px1 = d1 * cos a1
+                                   px2 = d2 * cos a2
+                                   py1 = d1 * sin a1
+                                   py2 = d2 * sin a2 
 
 
 
