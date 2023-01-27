@@ -182,7 +182,9 @@ posy (Polar d a) = d + (sin a)
 
 -- c 
 
-raio 
+raio :: Ponto -> Double 
+raio (Cartesiano x1  y1) =  
+raio (Polar d a) = d 
 
 
 
