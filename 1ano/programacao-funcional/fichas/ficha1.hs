@@ -208,7 +208,7 @@ dist'' (Polar d1 a1) (Polar d2 a2) = sqrt((px1-px2)^2+(py1-py2)^2)
                                    px1 = d1 * cos a1
                                    px2 = d2 * cos a2
                                    py1 = d1 * sin a1
-                                   py2 = d2 * sin a2 
+                                   py2 = d2 * sin a2  
 
 
 
