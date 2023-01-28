@@ -65,3 +65,64 @@ instance Num Frac where
 seleciona2 :: Frac -> [Frac] -> [Frac] 
 seleciona2 f l = filter (\j -> j > f*2 ) l  
 
+
+-- Questão 2 
+
+data Exp a = Const a
+           | Simetrico (Exp a)
+           | Mais (Exp a) (Exp a)
+           | Menos (Exp a) (Exp a)
+           | Mult (Exp a) (Exp a)        
+
+
+calcula :: Num a => Exp a -> a
+calcula (Const x) = x
+calcula (Simetrico x) = - calcula x
+calcula (Mais x y) = calcula x + calcula y
+calcula (Menos x y) = calcula x - calcula y
+calcula (Mult x y) = calcula x * calcula y
+
+infixa :: Show a => Exp a -> String
+infixa (Const x) = show x
+infixa (Simetrico x) = '-' : '(' :  infixa x ++ ")"
+infixa (Mais x y) = '(' : infixa x ++ " + " ++ infixa y ++ ")"
+infixa (Menos x y) = '(' : infixa x ++ " - " ++ infixa y ++ ")"
+infixa (Mult x y) = '(' : infixa x ++ " * " ++ infixa y ++ ")"
+
+
+
+-- a 
+
+instance Show a => Show (Exp a) where 
+    show e = infixa e 
+
+
+-- b 
+
+instance (Eq a, Num a) => Eq (Exp a) where 
+    (==) e1 e2 = calcula e1 == calcula e2 
+
+
+-- c 
+
+instance Num a => Num (Exp a) where 
+    (+) e1 e2 = Const (calcula e1 + calcula e2) 
+    (-) e1 e2 = Const (calcula e1 - calcula e2) 
+    (*) e1 e2 = Const (calcula e1 * calcula e2)
+    abs e = Const (abs (calcula e)) 
+    negate e = Const (negate (calcula e)) 
+    signum e = Const (signum (calcula e)) 
+    fromInteger n = Const (fromInteger n) 
+ 
+
+
+
+
+-- Questão 3 
+
+data Movimento = Credito Float | Debito Float
+data Data = D Int Int Int
+data Extracto = Ext Float [(Data, String, Movimento)]
+
+
+-- a 
