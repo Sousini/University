@@ -156,5 +156,20 @@ ordena (Ext vi l) = let lf = sortOn (\(d,_,_) -> d) l
 
 
 
+-- d 
 
+saldo :: Extracto -> Float 
+saldo (Ext valor lm) = foldl(\ini (_,_,mov) -> case mov of Credito x -> x + ini
+                                                           Debito x -> ini - x ) valor lm
 
+instance Show Extracto where  
+    show (Ext n l) = "Saldo anterior: " ++ show n ++ 
+                     "\n---------------------------------------" ++ 
+                     "\nData        Descricao   Credito   Debito" ++ 
+                     "\n---------------------------------------\n" ++ 
+                     concatMap (\(dat,str,mov) -> show dat ++ replicate (11 - (length (show dat))) ' ' ++ map (toUpper) str ++ "    \n") l ++ 
+                     "---------------------------------------" ++ 
+                     "\nSaldo actual: " ++ show (saldo (Ext n l)) 
+
+                    
+               
