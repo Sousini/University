@@ -57,5 +57,11 @@ instance Num Frac where
                      | n1*n2 > 0 = F 1 1 
                      | n1*n2 < 0 = F (-1) 1 
     fromInteger n1 = F n1 1 
-    
+
+
+
+-- f 
+
+seleciona2 :: Frac -> [Frac] -> [Frac] 
+seleciona2 f l = filter (\j -> j > f*2 ) l  
 
