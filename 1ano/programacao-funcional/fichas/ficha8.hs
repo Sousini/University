@@ -126,3 +126,15 @@ data Extracto = Ext Float [(Data, String, Movimento)]
 
 
 -- a 
+
+instance Eq Data where 
+    (==) e1 e2 = e1 == e2 
+
+
+instance Ord Data where 
+    compare (D d1 m1 a1) (D d2 m2 a2) | (a1,m1,d1) == (a2,m2,d2) = EQ 
+                                      | (a1,m1,d1) > (a2,m2,d2) = GT 
+                                      | (a1,m1,d1) < (a2,m2,d2) = LT 
+
+
+
