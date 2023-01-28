@@ -137,4 +137,5 @@ instance Ord Data where
                                       | (a1,m1,d1) < (a2,m2,d2) = LT 
 
 
-
+instance Show Data where 
+    show (D d m a) = show a ++ "/" ++ show m ++ "/" ++ show d  
