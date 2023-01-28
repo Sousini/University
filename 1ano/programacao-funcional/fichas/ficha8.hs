@@ -1,4 +1,7 @@
+module Ficha8 where
 
+import Data.List
+import Data.Char
 
 -- Questão 1 
 
@@ -137,5 +140,21 @@ instance Ord Data where
                                       | (a1,m1,d1) < (a2,m2,d2) = LT 
 
 
+
+-- b
+
 instance Show Data where 
-    show (D d m a) = show a ++ "/" ++ show m ++ "/" ++ show d  
+    show (D d m a) = show a ++ "/" ++ show m ++ "/" ++ show d 
+
+
+
+-- c  
+
+ordena :: Extracto -> Extracto 
+ordena (Ext vi l) = let lf = sortOn (\(d,_,_) -> d) l 
+                    in (Ext vi lf)
+
+
+
+
+
