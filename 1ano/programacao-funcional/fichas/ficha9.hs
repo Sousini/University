@@ -96,4 +96,84 @@ comuns (Ap a1@(a:b:c:d:e:[]) (f,g)) (Ap a2@(h:i:j:k:l:[]) (m,n)) = (contaNums,co
 
 -- (i)
 instance Eq Aposta where
-    (==) a b = comuns a b == (5,2)  
+    (==) a b = comuns a b == (5,2) 
+
+
+-- (ii) 
+premio :: Aposta -> Aposta -> Maybe Int   
+premio ap ch = case comuns ap ch of (5,n) -> Just (3 - n)
+                                    (4,n) -> Just (6 - n)
+                                    (3,n) -> Just (10 - n - (if n == 2 then 1 else 0))
+                                    (2,2) -> Just 8
+                                    (1,2) -> Just 11
+                                    (2,n) -> Just (13 - n)
+                                    _ -> Nothing
+
+
+-- d 
+
+-- (i) 
+
+leAposta :: IO Aposta 
+leAposta = do 
+    print "Insira os numeros (separados por um espaço):" 
+    nums <- getLine 
+    print "Insira as estrelas (separadas por um espaço):" 
+    stars <- getLine
+    let bet = Ap (map read (unspace nums)) (let (a:b:r) = unspace stars in (read a, read b))
+    if valida bet then return bet else do print "Aposta invalida, tente novamente!"; leAposta
+
+
+unspace :: String -> [String]
+unspace str = map Text.unpack (Text.split (==' ') (Text.pack str))  
+
+
+-- (ii) 
+
+joga :: Aposta -> IO ()
+joga ch = do
+    ap <- leAposta
+    print ((++) "Premio: " $ show $ fromMaybe 0 (premio ap ch))
+
+
+
+
+-- e 
+
+geraChave :: IO Aposta
+geraChave = do
+    nums <- generate 'N' []
+    [star1,star2] <- generate 'S' []
+    return (Ap nums (star1,star2))
+
+generate :: Char -> [Int] -> IO [Int]
+generate c l = do
+    n <- randomRIO (1,if c == 'N' then 50 else 12)
+    if length l == 5 && c == 'N' || length l == 2 && c == 'S' then return l 
+    else if n `elem` l then generate c l else generate c (n:l)
+
+
+
+-- f
+
+main :: IO ()
+main = do ch <- geraChave
+          ciclo ch
+
+ciclo :: Aposta -> IO ()
+ciclo ch = do
+    menuOpt <- menu
+    case menuOpt of "1" -> do joga ch; ciclo ch
+                    "2" -> do putStrLn "Nova chave gerada"; main
+                    "0" -> return ()
+
+
+menu :: IO String
+menu = do putStrLn menutxt
+          putStr "Opcao: "
+          getLine
+    where menutxt = unlines ["",
+                             "Apostar ........... 1",
+                             "Gerar nova chave .. 2",
+                             "",
+                             "Sair .............. 0"]
