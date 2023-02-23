@@ -21,7 +21,14 @@
   
   <tr> 
     <td align="center">1<sup>st</sup></td> 
-    <td align="center">1<sup>st</sup></td>  
+    <td align="center">2<sup>st</sup></td>  
     <td align="center">Programação Imperativa</td> 
-    <td align="center"> 🚧
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/programacao-imperativa">(Click here) </a> </td> 
+  
+  <tr> 
+    <td align="center">1<sup>st</sup></td> 
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">Laboratórios de Algoritmia</td> 
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/laboratorios-algoritmia">(Click here) </a> </td>
+ 
 
