@@ -17,10 +17,10 @@ void quadrado(int n) {
     system("pause");  
 }
 
-int main() {
+/*int main() {
     quadrado(5);
     return 0;
-} 
+}*/ 
 
 
 //3.2 
@@ -46,14 +46,59 @@ void xadrez(int n){
     system("pause");
 }
 
-int main(){
+/*int main(){
     xadrez(5);
     return 0; 
-}
+}*/
 
 
 //3.3 
 
-void triangulo(int n) {
+
+void trianguloA() {
+    int altura; // altura inserida 
+    int c = 0; // conta # 
+    int t; // 1 = True || 0 = False
+    int m = 1; // maximo # numa linha
     
+    printf("Digite a altura para o triangulo: \n");
+    scanf("%d", &altura);
+
+    while (c <= altura) {
+        c++; 
+        if (m < c) {
+            break;
+        }
+        printf("#"); 
+
+
+
+        if (c == altura) {
+            printf("\n"); 
+            t = 1; 
+            m--;
+            c = 0; 
+        }
+
+        if (c == m) {
+            if (t == 0) {
+                printf("\n");
+                m++;
+                c = 0;
+            }else {
+                printf("\n");
+                m--;
+                c = 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+int main(){
+    trianguloA();
+    return 0;
 }
