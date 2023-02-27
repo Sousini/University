@@ -50,3 +50,10 @@ int main(){
     xadrez(5);
     return 0; 
 }
+
+
+//3.3 
+
+void triangulo(int n) {
+    
+}
