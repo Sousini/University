@@ -18,10 +18,10 @@ void quadrado(int n) {
     system("pause");  
 }
 
-/*int main() {
+int main() {
     quadrado(5);
     return 0;
-}*/ 
+}
 
 
 //3.2 
@@ -47,10 +47,10 @@ void xadrez(int n){
     system("pause");
 }
 
-/*int main(){
+int main(){
     xadrez(5);
     return 0; 
-}*/
+}
 
 
 //3.3 
@@ -98,12 +98,12 @@ void trianguloA() {
 
 
 
-/*
+
 int main(){
     trianguloB();
     return 0;
 }
-*/
+
 
 void trianguloB(int n) {
     int linha, symbol, espaco, x; 
@@ -124,6 +124,9 @@ void trianguloB(int n) {
 
 
 int main(){
-    trianguloB(5);
+    trianguloB (5);
     return 0;
 }
+
+
+
