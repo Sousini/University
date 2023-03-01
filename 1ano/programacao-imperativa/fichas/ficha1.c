@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h> 
 
 
 
@@ -56,39 +57,38 @@ void xadrez(int n){
 
 
 void trianguloA() {
-    int altura; // altura inserida 
-    int c = 0; // conta # 
-    int t; // 1 = True || 0 = False
-    int m = 1; // maximo # numa linha
-    
-    printf("Digite a altura para o triangulo: \n");
+    int x = 0; 
+    int y = 1; 
+    int altura;
+    int topo = 0;
+
+    printf("\nDigite um numero para a altura do triangulo: \n");
     scanf("%d", &altura);
 
-    while (c <= altura) {
-        c++; 
-        if (m < c) {
+    while (x <= altura) {
+        x++;
+        if (y < x) {
             break;
         }
-        printf("#"); 
-
-
-
-        if (c == altura) {
-            printf("\n"); 
-            t = 1; 
-            m--;
-            c = 0; 
+        printf("#");
+        
+        
+        if (x == altura) {
+            printf("\n");
+            topo = 1;
+            y--;
+            x = 0;
         }
 
-        if (c == m) {
-            if (t == 0) {
+        if (x == y) {
+            if (topo == 0) {
                 printf("\n");
-                m++;
-                c = 0;
-            }else {
+                y++;
+                x = 0;
+            } else {
                 printf("\n");
-                m--;
-                c = 0;
+                y--;
+                x = 0;
             }
         }
     }
@@ -98,7 +98,32 @@ void trianguloA() {
 
 
 
+/*
 int main(){
-    trianguloA();
+    trianguloB();
+    return 0;
+}
+*/
+
+void trianguloB(int n) {
+    int linha, symbol, espaco, x; 
+    x = 1;
+
+    for (linha = 1; linha < n + 1; linha ++){
+        for (espaco = n - linha; espaco != 0; espaco--) {
+            putchar(' ');
+        }
+        for (symbol = 0; symbol < x; symbol++) {
+            putchar('#');
+        }
+        printf("\n"); 
+        x += 2; 
+    }
+}
+
+
+
+int main(){
+    trianguloB(5);
     return 0;
 }
