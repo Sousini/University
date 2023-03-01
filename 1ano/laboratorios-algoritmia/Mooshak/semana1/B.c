@@ -16,7 +16,7 @@ int main() {
 
     s1 = recebe();
     s2 = recebe();
-    s3 = recebe();
+    s3 = recebe(); 
 
 
     if ((s1 == s2 && s2 == s3) || (s1 >= s2 && s2 >= s3 ) || (s1 <= s2 && s2 <= s3)) {
