@@ -2,6 +2,7 @@ import Data.Char
 import Data.List
 
 
+
 -- Exercicio 1 
 
 -- a 
