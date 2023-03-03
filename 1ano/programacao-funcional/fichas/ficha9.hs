@@ -11,7 +11,6 @@ import Control.Monad
 
 
 
-
 -- Questão 1 
 
 -- a 
