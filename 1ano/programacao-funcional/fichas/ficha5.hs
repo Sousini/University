@@ -16,6 +16,7 @@ zipWith' _ _ [] = []
 zipWith' _ [] _ = [] 
 zipWith' f (h:t) (x:xs) = f h x : zipWith' f t xs 
 
+
 -- c 
 
 takeWhile' :: (a -> Bool) -> [a] -> [a] 
