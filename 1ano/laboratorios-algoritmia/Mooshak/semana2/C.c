@@ -71,5 +71,6 @@ int main() {
 
     printf("%d %d %d\n", inzelW, cmdW, draw); 
 
+
     return 0;
 }
