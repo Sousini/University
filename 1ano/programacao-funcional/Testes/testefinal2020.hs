@@ -1,6 +1,4 @@
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Redundant if" #-}
-{-# HLINT ignore "Used otherwise as a pattern" #-}
+
 import Control.Applicative (Applicative(liftA2))
 import Data.Time.Format.ISO8601 (recurringIntervalFormat)
 import Control.Monad.RWS.Strict (Any(getAny))
