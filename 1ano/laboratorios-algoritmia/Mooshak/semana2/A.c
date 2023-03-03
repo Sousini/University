@@ -3,6 +3,7 @@
 
 
 
+
 int main() {
     int n, i, c;
     int x = 0;
@@ -21,8 +22,10 @@ int main() {
         }
     }
 
-    
+
+
     printf("%d %d\n", x, y);
     
+
     return 0; 
 }
