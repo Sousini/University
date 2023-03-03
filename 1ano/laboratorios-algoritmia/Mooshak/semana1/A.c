@@ -24,5 +24,6 @@ int main() {
     ve_maior(5); 
 
     printf("%d\n", ordem); 
+    
     return 0;
 }
