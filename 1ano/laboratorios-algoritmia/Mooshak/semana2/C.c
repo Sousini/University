@@ -2,38 +2,74 @@
 #include <stdlib.h> 
 
 
-int main() {
-    int ri = 0;
-    int rc = 0;
-    int e = 0; 
-    int n, j;
-    char i, c; 
 
-    if(scanf("%d", &n) != 1) return 1; 
+
+int main() {
+    int cmdW = 0;
+    int inzelW = 0;
+    int draw = 0; 
+    int n, j;
+    char inzel, cmd; 
+
+    if(scanf("%d\n", &n) != 1) return 1; 
 
     for(j = 0; j < n; j++) {
-        if(scanf("%c", &i) != 1) return 1; 
-        if(scanf("%c", &c) != 1) return 1; 
+        if(scanf("\n%c", &inzel) != 1) return 1; 
+        if(scanf("%c", &cmd) != 1) return 1; 
 
-        switch ( i ) {
+        switch ( inzel ) {
 
             case '@' :
-                switch ( c ) {
+                switch ( cmd ) {
                     case '*':
+                        draw += 1;
+                        break;
                     
-
+                    case '-':
+                        cmdW += 1;
+                        break;
+                    
+                    case '+':
+                        inzelW += 1;
+                        break;
                 }
-            
+                break;
+
             case '|' :
-
-
+                switch ( cmd ) {
+                    case '*':
+                        inzelW += 1;
+                        break;
+                    
+                    case '-':
+                        draw += 1;
+                        break;
+                    
+                    case '+':
+                        cmdW += 1;
+                        break;
+                }
+                break;
 
             case 'X' :
+                switch ( cmd ) {
+                    case '*':
+                        cmdW += 1;
+                        break;
 
+                    case '-':
+                        inzelW += 1;
+                        break;
+                    
+                    case '+':
+                        draw += 1;
+                        break;
+                }
+                break;
         }
     }
 
-    printf("%d %d %d\n", ri, rc, e); 
+    printf("%d %d %d\n", inzelW, cmdW, draw); 
 
     return 0;
 }
