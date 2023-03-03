@@ -5,6 +5,7 @@ import Control.Monad.RWS.Strict (Any(getAny))
 
 
 
+
 -- Questão 1 
 
 -- a 
