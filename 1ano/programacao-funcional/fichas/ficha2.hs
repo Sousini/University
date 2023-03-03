@@ -4,8 +4,7 @@
 
 
 -- alinea a 
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Use map" #-}
+
 
 dobros :: [Float] -> [Float]
 dobros []    = [] 
