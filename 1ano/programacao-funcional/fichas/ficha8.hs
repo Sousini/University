@@ -3,6 +3,8 @@ module Ficha8 where
 import Data.List
 import Data.Char
 
+
+
 -- Questão 1 
 
 data Frac = F Integer Integer 
