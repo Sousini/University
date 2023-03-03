@@ -4,42 +4,24 @@
 
 
 int main() {
+    int n, i, c;
     int x = 0;
-    int y = 0; 
-    int nc; 
-    int j;
-    int i; 
+    int y = 0;
 
-    if(scanf("%d", &j) != 1) return 1; 
+    if(scanf("%d",&n) != 1) return 1; // numero de linhas
 
-    
-    for(i = 1; i <= j; i++) {
-        if(scanf ("%d", &nc) != 1) 
-        return 1; 
-
-        if (nc > 0 && nc <= 78) {
-            if (nc % 4 == 0) {
-                x += 1; 
-                y = y;
-            } else {
-                if (nc % 4 == 3) {
-                    x -= 1; 
-                    y = y;
-                } else {
-                    if (nc % 4 == 2) {
-                        x = x; 
-                        y -= 1;
-                    } else {
-                        if (nc % 4 == 1) {
-                            x = x; 
-                            y += 1;
-                        }
-                    }
-                }
-            }
+    for(i = 0; i < n; i++){
+        if(scanf("%d", &c) != 1) return 1; //numero da carta
+        
+        if (c > 0 && c <= 78){                          //baralho com 78 cartas (1-78)
+            if(c % 4 == 0) x += 1; else             //direita
+                if(c % 4 == 3) x -= 1; else         //esquerda
+                    if(c % 4 == 2) y += 1; else     //baixo
+                        if(c % 4 == 1) y -= 1;      //cima
         }
     }
-   
+
+    
     printf("%d %d\n", x, y);
     
     return 0; 
