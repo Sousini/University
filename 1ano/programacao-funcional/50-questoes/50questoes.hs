@@ -4,12 +4,7 @@
 
 
 -- exercicio 1
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Use list literal" #-}
-{-# HLINT ignore "Use foldr" #-}
-{-# HLINT ignore "Redundant if" #-}
-{-# OPTIONS_GHC -Wno-overlapping-patterns #-}
-{-# HLINT ignore "Redundant bracket" #-}
+
 
 myenumFromTo :: Int -> Int -> [Int] 
 myenumFromTo x y | x >= y = x : []
