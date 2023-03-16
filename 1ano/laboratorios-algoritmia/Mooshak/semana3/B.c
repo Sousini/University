@@ -20,7 +20,7 @@ int main() {
     int resultado[N];
 
     for(i = 0; i < N; i++){
-         if(scanf("%s", string) > 20)
+        if(scanf("%s", string) > 20)
             return 1;
         int size = strlen(string);
 
