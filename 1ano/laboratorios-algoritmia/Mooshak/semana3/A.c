@@ -29,31 +29,31 @@ int main() {
             }
         }
 
-        strcat(new2, new); 
+        strcat(new2, new); //concatena as 2 strings e armazena na new2
         new2[strlen(new2)] = ' ';
 
-        memset(new, 0,strlen(new));
+        memset(new, 0,strlen(new)); //limpar o array new
 
         c = 1;
 
     }
 
-
-    char *token = strtok(new2, " ");
+    
+    char *token = strtok(new2, " "); //separar a atring new2 em substrings com espaços em branco
     char *a[1000];
     int x = 0;
     
 
-    while (token != NULL) {
+    while (token != NULL) { //enquanto houver substrings para separar
 
         a[x] = token;
-        token = strtok (NULL, " ");
+        token = strtok (NULL, " "); //se não houver substrings o token = NULL
         x++;
     }
     int o = 0;
 
     for (int i = 0; i < sizeo; i++) {
-        o = (ordem[i] - '0') - 1;
+        o = (ordem[i] - '0') - 1; //converter em inteiro
         printf("%s", a[o]); 
     }
     
