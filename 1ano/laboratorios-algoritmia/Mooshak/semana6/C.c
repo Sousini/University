@@ -21,9 +21,9 @@ int compare(const void *a, const void *b) {
     return -d_preco; // + -> pedido 1 < pedido 2; - -> pedido 1 > pedido 2
   } else if(pedido1 -> dificuldade != pedido2 -> dificuldade) { // caso o preço não seja igual verifica se a dificuldade é diferente
     return pedido1 -> dificuldade - pedido2 -> dificuldade; // retorna a diferença para o com menor dificuldade ficar em primeiro na ordenação (+ -> pedido 1 > 2)
-  } else {
-    return pedido1 -> ordem - pedido2 -> ordem; // se o preço e a dificuldade forem iguais retorna a diferença entre as ordens para ficar o pedido mais antigo em cima
-  }
+          } else {
+              return pedido1 -> ordem - pedido2 -> ordem; // se o preço e a dificuldade forem iguais retorna a diferença entre as ordens para ficar o pedido mais antigo em cima
+          } 
 }
 
 int main() {

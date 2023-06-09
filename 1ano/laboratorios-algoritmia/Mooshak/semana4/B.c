@@ -19,13 +19,13 @@ int main() {
 
         for(int i = 0; i < size - 1; i++) {
             for(int j = i + 1; j < size; j++) {
-                if(a[j] == a [i]) {
-                    r = a [i];
+                if(a[j] == a[i]) {
+                    r = a[i];
                 }
             }
         }
 
-    resultado[l] = r;
+        resultado[l] = r;
     }
 
 
