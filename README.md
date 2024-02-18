@@ -30,5 +30,33 @@
     <td align="center">2<sup>st</sup></td>
     <td align="center">Laboratórios de Algoritmia</td> 
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/laboratorios-algoritmia">(Click here) </a> </td>
+
+  <tr>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">Sistemas Operativos</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/SO">(Click here)</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">Laboratórios de Algoritmia II</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/LA2">(Click here)</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">Programação orientada a objetos</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/POO">(Click here)</a></td>
+  </tr>
+
+  <tr>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">2<sup>st</sup></td>
+    <td align="center">Cálculo de Programas</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+  </tr>
  
 
