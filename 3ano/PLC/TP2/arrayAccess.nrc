@@ -1,0 +1,9 @@
+int main() {
+    int arr[10];
+    int arr2[4];
+    arr[5] = 12;
+    arr2[1] = 30;
+    print(arr[5]);
+    print(arr2[1]);
+    print(arr2[0]);
+}

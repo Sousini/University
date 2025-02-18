@@ -1,0 +1,9 @@
+int main() {
+    int x = 5;
+    int p = 30;
+    int arr [10];
+    arr [2] = x + p;
+    if (x > 0) {
+        print(arr[2]);
+    }
+}

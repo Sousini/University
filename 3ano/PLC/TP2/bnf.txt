@@ -1,0 +1,60 @@
+program         : "int" "main" "(" ")" "{" declarations statements "}"
+
+declarations    : declaration declarations 
+                | ε
+
+declaration     : "int" identifier array_decl ";"
+                | "int" identifier "=" expression ";"
+                | "int" identifier ";"
+
+array_decl      : "[" NUMBER "]"
+                | "[" NUMBER "]" "[" NUMBER "]"
+
+statements      : statement statements
+                | ε
+
+statement       : assignment ";"
+                | if_statement
+                | while_statement
+                | io_statement ";"
+
+assignment      : variable "=" expression
+
+if_statement    : "if" "(" condition ")" "{" statements "}"
+                | "if" "(" condition ")" "{" statements "}" "else" "{" statements "}"
+
+while_statement : "while" "(" condition ")" "{" statements "}"
+
+io_statement    : "read" "(" variable ")"
+                | "print" "(" expression ")"
+
+expression      : term
+                | expression "+" term
+                | expression "-" term
+
+term            : factor
+                | term "*" factor
+                | term "/" factor
+                | term "%" factor
+
+factor          : NUMBER
+                | variable
+                | "(" expression ")"
+
+variable        : identifier
+                | identifier "[" expression "]"
+                | identifier "[" expression "]" "[" expression "]"
+
+condition       : expression rel_op expression
+                | condition "&&" condition
+                | condition "||" condition
+                | "!" condition
+                | "(" condition ")"
+
+rel_op          : "<" | ">" | "<=" | ">=" | "==" | "!="
+
+identifier      : LETTER (LETTER | DIGIT)*
+
+NUMBER          : DIGIT+
+LETTER          : [a-zA-Z]
+DIGIT           : [0-9]

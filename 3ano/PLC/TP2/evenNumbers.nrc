@@ -1,0 +1,12 @@
+int main() {
+    int arr[10];
+    int i = 0;
+
+    while(i < 10) {
+        arr[i] = i;
+        if((arr[i] % 2) == 0){
+            print(arr[i]);
+        }
+        i = i + 1;
+    }
+}
