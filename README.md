@@ -63,7 +63,7 @@
     <td align="center">3<sup>rd</sup></td>
     <td align="center">1<sup>st</sup></td>
     <td align="center">Base de Dados</td>
-    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/BD">(Click here)</a></td>
   </tr>
 
   <tr>
@@ -77,7 +77,7 @@
     <td align="center">3<sup>rd</sup></td>
     <td align="center">1<sup>st</sup></td>
     <td align="center">Lógica Computacional</td>
-    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/LC">(Click here)</a></td>
   </tr>
 
   <tr>
