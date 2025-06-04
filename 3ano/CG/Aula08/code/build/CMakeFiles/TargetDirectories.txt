@@ -1,0 +1,3 @@
+/home/sousini/Programming/University/3ano/CG/Aula08/code/build/CMakeFiles/class8.dir
+/home/sousini/Programming/University/3ano/CG/Aula08/code/build/CMakeFiles/edit_cache.dir
+/home/sousini/Programming/University/3ano/CG/Aula08/code/build/CMakeFiles/rebuild_cache.dir
