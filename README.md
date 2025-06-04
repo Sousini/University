@@ -10,6 +10,7 @@
     <th>Semester</th> 
     <th>Subject</th> 
     <th>Repository</th>
+    <th>Project</th>
   </tr> 
   
   <tr> 
@@ -17,25 +18,30 @@
     <td align="center">1<sup>st</sup></td> 
     <td align="center">Programação Funcional</td> 
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/programacao-funcional">(Click here) </a> </td>
+    <td align="center">None</td>
   </tr> 
   
   <tr> 
     <td align="center">1<sup>st</sup></td> 
     <td align="center">2<sup>nd</sup></td>  
     <td align="center">Programação Imperativa</td> 
-    <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/programacao-imperativa">(Click here) </a> </td> 
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/programacao-imperativa">(Click here) </a> </td>
+    <td align="center">None</td>
+  </tr>
   
   <tr> 
     <td align="center">1<sup>st</sup></td> 
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Laboratórios de Algoritmia</td> 
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/1ano/laboratorios-algoritmia">(Click here) </a> </td>
+    <td align="center"><a href="https://github.com/Sousini/Donut-Hunt">(Click here)</a></td>
 
   <tr>
     <td align="center">2<sup>nd</sup></td>
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Sistemas Operativos</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/SO">(Click here)</a></td>
+    <td align="center"><a href="https://github.com/Sousini/Projeto-SO">(Click here)</a></td> 
   </tr>
 
   <tr>
@@ -43,6 +49,7 @@
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Laboratórios de Algoritmia II</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/LA2">(Click here)</a></td>
+    <td align="center">None</td>
   </tr>
 
   <tr>
@@ -50,12 +57,14 @@
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Programação orientada a objetos</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/POO">(Click here)</a></td>
+    <td align="center"> To Do </a> </td>
   </tr>
 
   <tr>
     <td align="center">2<sup>nd</sup></td>
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Cálculo de Programas</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
   </tr>
 
@@ -64,6 +73,7 @@
     <td align="center">1<sup>st</sup></td>
     <td align="center">Base de Dados</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/BD">(Click here)</a></td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/BD/jogosolimpicos">(Click here)</a></td>
   </tr>
 
   <tr>
@@ -71,6 +81,7 @@
     <td align="center">1<sup>st</sup></td>
     <td align="center">Processamento de Linguagens e Compiladores</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+    <td align="center">None</td>
   </tr>
 
   <tr>
@@ -78,6 +89,7 @@
     <td align="center">1<sup>st</sup></td>
     <td align="center">Lógica Computacional</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/LC">(Click here)</a></td>
+    <td align="center">None</td>
   </tr>
 
   <tr>
@@ -85,6 +97,7 @@
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Computação Gráfica</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+    <td align="center">On Going</td>
   </tr>
 
   <tr>
@@ -92,6 +105,7 @@
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Programação Concorrente</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+    <td align="center">To Do</td>
   </tr>
 
   
