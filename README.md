@@ -80,7 +80,7 @@
     <td align="center">3<sup>rd</sup></td>
     <td align="center">1<sup>st</sup></td>
     <td align="center">Processamento de Linguagens e Compiladores</td>
-    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/PLC">(Click here)</a></td>
     <td align="center">None</td>
   </tr>
 
@@ -96,16 +96,16 @@
     <td align="center">3<sup>rd</sup></td>
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Computação Gráfica</td>
-    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
-    <td align="center">On Going</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/CG">(Click here)</a></td>
+    <td align="center"><a href="https://github.com/Sousini/Projeto-CG">(Click here)</a></td>
   </tr>
 
   <tr>
     <td align="center">3<sup>rd</sup></td>
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Programação Concorrente</td>
-    <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/CP">(Click here)</a></td>
-    <td align="center">To Do</td>
+    <td align="center"><a href="https://github.com/Sousini/University/tree/main/3ano/PC">(Click here)</a></td>
+    <td align="center">...</td>
   </tr>
 
   
