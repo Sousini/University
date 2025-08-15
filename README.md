@@ -57,7 +57,7 @@
     <td align="center">2<sup>nd</sup></td>
     <td align="center">Programação orientada a objetos</td>
     <td align="center"><a href="https://github.com/Sousini/University/tree/main/2ano/POO">(Click here)</a></td>
-    <td align="center"> To Do </a> </td>
+    <td align="center"> ... </a> </td>
   </tr>
 
   <tr>
