@@ -108,6 +108,13 @@
     <td align="center">...</td>
   </tr>
 
+  <tr>
+    <td align="center">3<sup>rd</sup></td>
+    <td align="center">2<sup>nd</sup></td>
+    <td align="center">Projeto Final</td>
+    <td align="center"><a href="https://github.com/Sousini/Projeto-Final-web">(Click here)</a></td>
+  </tr>
+
   
  
 
